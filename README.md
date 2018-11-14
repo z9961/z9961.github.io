@@ -1,7 +1,5 @@
 
-<div align="center"> <img src="http://qiubaiying.github.io/img/BY_bolg_logo.png" width="600"/> </div><br>
-
-### [查看博客戳这里 👆](http://www.aloli.cn)
+### [查看博客戳这里](http://www.aloli.cn)
 
 
 ## 致谢
