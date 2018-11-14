@@ -1,10 +1,10 @@
 # Site settings
-title: 建设中sss
+title: 建设中
 SEOTitle: 叙事的冰的博客 Testing | BY Blog
 header-img: img/post-bg-desk.jpg
 email: z9961#163.com
 description: "Every failure is leading towards success."
-keyword: "叙事的冰test"
+keyword: "叙事的冰"
 url: "http://z9961.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/z9961/z9961.github.io.git" # you code repository
