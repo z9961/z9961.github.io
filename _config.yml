@@ -60,7 +60,7 @@ gitalk:
   enable: true    #是否开启Gitalk评论
   clientID: ef0ece0dc4b0cc9076a0                            #生成的clientID
   clientSecret: 987698331d3fbe97aca1bf6fd0e06f29a776fc77    #生成的clientSecret
-  repo: https://github.com/z9961/z9961.github.io.git    #仓库名称
+  repo: z9961.github.io   #仓库名称
   owner: z9961    #github用户名
   admin: z9961
   distractionFreeMode: true #是否启用类似FB的阴影遮罩
