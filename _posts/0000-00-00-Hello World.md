@@ -2,7 +2,7 @@
 layout:     post
 title:      Hello World
 subtitle:   Hello World
-date:       2019-01-12
+date:       0000-00-00
 author:     z9961
 header-img: https://bing.ioliu.cn/v1?d=2&w=1280&h=320
 catalog: true
