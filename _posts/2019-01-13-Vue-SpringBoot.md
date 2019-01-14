@@ -26,6 +26,21 @@ import axios from 'axios';
 ```
 
 ```vue
+axios.defaults.baseURL = 'http://127.0.0.1:8888';  //之后的url直接写/xxx
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded'; //改为表单提交
+axios.defaults.withCredentials=true; //携带cooki
+axios.interceptors.request.use(function (config) {
+    // 在发送请求之前,格式化参数，增加token
+    let data = config.data;
+    let params = new URLSearchParams() //将参数转换为url的形式
+    for (var key in config.data) {
+        params.append(key, data[key])
+    }
+    config.data = params;
+    return config;
+}, function (error) {
+    return Promise.reject(error);
+});
 Vue.prototype.$axios = axios;
 ```
 
@@ -42,14 +57,25 @@ Vue.prototype.$axios = axios;
 2.在要使用请求的vue中添加methods
 
 ```
-  testaxios() {
-                this.$axios
-                    .get('http://192.168.1.231:8888/users/getall')
-                    .then(response => (this.info = response))
+            testaxios() {
+                this.$axios({
+                    method: 'POST',
+                    url: '/users/login',
+                    data: {
+                        username: 'uname',
+                        password: 'pwd'
+                    }
+                }).then(response => {
+                    var resdata = response.data;
+                    this.info = resdata;
+                    if (resdata.state == "200") {
+                        alert("登录成功\nmsg:" + resdata.msg+"\nstate:"+resdata.state);
+                    }
+                })
             }
 ```
 
-​	这里的info是template中的{{info}}
+​	这里的this.info是template中的{{info}}
 
 3.跨域问题
 
@@ -88,6 +114,33 @@ public class CORSConf {
 ```
 
 
+
+附上后端代码
+
+```
+@RestController
+@RequestMapping("/users")
+public class UsersController {
+
+    @Autowired
+    private IUsersService usersService;
+
+    @RequestMapping("/getall")
+    public List<Users> getall() {
+        return usersService.list();
+    }
+
+    @RequestMapping("/login")
+    public Map<String,String> login(String username, String password) {
+        System.out.println(username+"\n"+password);
+        Map<String,String> map = new HashMap<>();
+        map.put("state","200");
+        map.put("msg","ok");
+        return map;
+    }
+}
+
+```
 
 
 
