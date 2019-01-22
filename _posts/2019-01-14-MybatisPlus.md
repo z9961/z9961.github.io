@@ -39,3 +39,8 @@ tags: MybatisPlus
         </dependency>
 ```
 
+
+
+2.[lombok在IntelliJ IDEA下的使用](https://www.cnblogs.com/softidea/p/5960182.html)
+
+​	
