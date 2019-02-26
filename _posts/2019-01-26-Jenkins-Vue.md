@@ -15,6 +15,8 @@ jenkins+git+Webhooks
 
 环境：windows server 2008
 
+网上的教程大多数都是linux+ssh，和win下有些不同
+
 
 
 #### 步骤
@@ -29,7 +31,7 @@ jenkins+git+Webhooks
 
 ![mark](http://img.aloli.cn/github/20190126/EzoPSIW9eFyX.png)
 
-类似于之前的	[Jenkins-Springboot](http://github.aloli.cn/2019/01/22/Springboot/)
+类似于之前的	[Jenkins-Springboot](http://www.aloli.cn/2019/01/22/Jenkins-Springboot/)
 
 ```CMD
 set BUILD_ID=dontKillMe
@@ -38,6 +40,48 @@ exit 0
 ```
 
 这里的start是异步执行，不然构建超时
+
+---
+
+如果使用build部署的话
+
+![mark](http://img.aloli.cn/github/20190127/bV5BDSILAavy.png)
+
+```
+xcopy dist c:\dist /e /d /y
+```
+
+/y 直接覆盖 /d 目标为目录  /e 复制文件和目录
+
+nginx:
+
+```
+ server {
+        listen       80;
+        server_name  xxx.cn;
+
+        #charset koi8-r;
+
+        #access_log  logs/host.access.log  main;
+
+        location / {
+            root c:\dist;
+            try_files $uri $uri/ @router;
+            index index.html;
+        }
+
+        location @router {
+            rewrite ^.*$ /index.html last;
+        }
+
+        location /api {
+            proxy_pass http://127.0.0.1:8888/;
+        }
+		
+		......
+```
+
+
 
 ---
 

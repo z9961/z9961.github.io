@@ -41,7 +41,7 @@ jenkins+git+springboot+Webhooks
 
 ​		第二个是Webhooks，即你push到github就触发；
 
-​			[点这里](http://github.aloli.cn/2019/01/22/webhook/)
+​			[点这里](http://www.aloli.cn/2019/01/22/webhook/)
 
 ​		第五个是定时查询github仓库是否有变化，有则触发。
 
