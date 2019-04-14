@@ -46,5 +46,6 @@ mybatis-plus:
   mapper-locations: classpath*:mapper/*.xml
 ```
 
-
+4.MyBatis中使用@Update返回的并不是影响的行数，而是操作的行数
+  显示影响的行数需要在数据库链接配置中添加useAffectedRows=true
 
