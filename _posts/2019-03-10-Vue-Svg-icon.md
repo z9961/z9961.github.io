@@ -46,6 +46,32 @@ module.exports = {
 
 
 
+icon配置文件:
+
+```
+import Vue from 'vue'
+import SvgIcon from './SvgIcon'// svg组件
+
+Vue.component('svg-icon', SvgIcon);
+
+const req = require.context('./svg', false, /\.svg$/);
+const requireAll = requireContext => requireContext.keys().map(requireContext)
+requireAll(req);
+
+```
+
+
+
+使用:
+
+```
+ <svg-icon icon-class="我的班级"/>
+```
+
+
+
+
+
 遇到的坑:
 
 在main.js中
@@ -67,3 +93,5 @@ import './components/icon/index.js'
 参考:
 
 https://www.jianshu.com/p/1150876dfa04
+
+update:19.3.28
