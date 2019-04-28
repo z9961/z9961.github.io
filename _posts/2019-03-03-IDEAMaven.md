@@ -37,3 +37,22 @@ git config --global credential.helper store
 
 设置之后再填一遍账号密码
 
+
+
+## Maven
+
+阿里云的maven镜像
+
+```
+<mirror>
+<id>nexus-aliyun</id>
+<mirrorOf>*</mirrorOf>
+<name>Nexus aliyun</name>
+<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+</mirror>
+
+```
+
+注意有的包不全,需要切换回来
+
+例如com.github.ikidou中的TypeBuilder没有，不会在pom中报错，但是无法import
