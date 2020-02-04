@@ -4,7 +4,7 @@ title:      Vue-Svg-icon
 subtitle:   Vue-Svg-icon
 date:       2019-03-10
 author:     z9961
-header-img: https://bing.ioliu.cn/v1?d=2&w=1280&h=320
+header-img: https://bing.ioliu.cn/v1/rand?w=1280&h=320
 catalog: true
 tags: Vue
 ---

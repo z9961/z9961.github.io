@@ -4,7 +4,7 @@ title:      MybatisPlus
 subtitle:   MybatisPlus
 date:       2019-01-14
 author:     z9961
-header-img: https://bing.ioliu.cn/v1?d=2&w=1280&h=320
+header-img: https://bing.ioliu.cn/v1/rand?w=1280&h=320
 catalog: true
 tags: MybatisPlus
 ---
