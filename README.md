@@ -1,5 +1,5 @@
 
-### [查看博客戳这里](http://www.aloli.cn)
+### [查看戳这里](http://www.aloli.cn)
 
 
 ## 致谢

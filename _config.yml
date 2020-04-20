@@ -1,12 +1,12 @@
 # Site settings
 title: 境界的彼方
-SEOTitle: 境界的彼方 Testing | BY Blog
+SEOTitle: 境界的彼方
 header-img: img/trianglify.webp
 email: z9961#163.com
 description: "Every failure is leading towards success."
 keyword: "境界的彼方"
 url: "http://z9961.github.io"          # your host, for absolute URL
-baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
+baseurl: ""
 github_repo: "https://github.com/z9961/z9961.github.io.git" # you code repository
 
 # Sidebar settings
